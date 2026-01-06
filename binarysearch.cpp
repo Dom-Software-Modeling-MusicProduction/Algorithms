@@ -6,14 +6,14 @@ using namespace std;
 
 int binarysearch(int arr[], int target, int size){
     int start = 0; 
-    int end = size -1; //indicies of earliest and latest points where the number could be
+    int end = size -1; //indices of earliest and latest points where the number could be
     while(end>=start){
-        int mid = (start+end)/2;
+        int mid = (start+end)/2; //split the list in half
         if (arr[mid] == target){
             return mid;
         }
         else if (arr[mid] < target){
-            start = mid+1;
+            start = mid+1; 
         }
         else if (arr[mid] > target){
             end = mid-1;
@@ -27,7 +27,7 @@ int binarysearch(int arr[], int target, int size){
 
 int main(){
     srand(time(NULL));
-    int size = 1000;
+    int size = 100;
     int target = 45;
     int arr[size];
     arr[0] = 0;
